@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from "react";
-import { Redirect } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 import { auth, storage, firestore } from "./firebase";
 import { AuthContext } from "./AuthProvider";
 
@@ -16,8 +16,7 @@ let Home = () => {
       .onSnapshot((querySnapshot) => {
         setPosts(
           querySnapshot.docs.map((doc) => {
-            // console.log(doc.data());
-            return doc.data();
+            return { ...doc.data(), id: doc.id };
           })
         );
       });
@@ -46,6 +45,10 @@ let Home = () => {
           >
             Logout
           </button>
+
+          <Link to="/profile">
+            <button id="profile">Profile</button>
+          </Link>
 
           <input
             onChange={(e) => {

@@ -8,6 +8,16 @@
   border: none;
 }
 
+#profile {
+  position: fixed;
+  bottom: 15rem;
+  right: 2rem;
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  border: none;
+}
+
 .upload-btn {
   position: fixed;
   bottom: 3rem;
@@ -91,6 +101,7 @@ video {
   height: 80%;
   width: 100%;
   border: 1px solid black;
+  color: black;
 }
 
 .comment-form {
@@ -108,4 +119,24 @@ video {
   width: 20%;
   border: none;
   color: #0984e3;
+}
+
+img {
+  display: block;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+}
+
+.all-comments > div {
+  display: flex;
+  padding: 8px;
+}
+
+.all-comments > div > div {
+  margin-left: 20px;
+}
+
+.inner-comment {
+  margin-top: -1rem;
 }

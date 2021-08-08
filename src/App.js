@@ -1,5 +1,6 @@
 import Home from "./Home";
 import Login from "./Login";
+import Profile from "./Profile";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import AuthProvider from "./AuthProvider";
 
@@ -11,6 +12,9 @@ function App() {
           <Switch>
             <Route path="/home">
               <Home />
+            </Route>
+            <Route path="/profile">
+              <Profile />
             </Route>
             <Route path="/">
               <Login />
